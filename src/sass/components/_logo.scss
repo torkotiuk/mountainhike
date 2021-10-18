@@ -1,0 +1,36 @@
+.logo {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+
+  &-second-color {
+    color: var(--accent-color);
+  }
+
+  // .header & {
+  //   margin-right: 93px;
+  // }
+
+  &-light-theme-color {
+    color: #000000;
+  }
+
+  .footer & {
+    // display: inline-block;
+    @media screen and (max-width: 1199px) {
+      display: flex;
+      justify-content: center;
+    }
+
+    margin-bottom: 20px;
+    text-align: center;
+    outline: 3px solid blue;
+    margin-left: auto;
+  }
+
+  &-dark-theme-color {
+    color: var(--text-color-white);
+  }
+}

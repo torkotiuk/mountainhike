@@ -1,0 +1,25 @@
+.close-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  @media screen and (max-width: 677px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding-bottom: 2px;
+  }
+  @media screen and (min-width: 678px) {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  &:focus {
+    fill: var(--accent-color);
+    outline: none;
+  }
+}

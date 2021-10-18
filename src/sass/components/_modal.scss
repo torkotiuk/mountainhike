@@ -1,0 +1,132 @@
+.form-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-color);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  // @media screen and (max-width: 677px) {
+  //   padding-right: 32px;
+  // }
+  padding-right: 32px;
+
+  &field {
+    margin-bottom: 10px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: var(--description-color);
+
+    &-wrapper {
+      position: relative;
+      display: block;
+      margin-top: 4px;
+    }
+  }
+}
+
+.modal__input {
+  display: block;
+
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms var(--timing-function);
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--accent-color);
+  }
+}
+
+.modal-svg-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms var(--timing-function);
+
+  .modal__input:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+.modal__message {
+  margin-bottom: 10px;
+  padding: 6px 16px;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms var(--timing-function);
+
+  &-label {
+    margin-bottom: 4px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: var(--description-color);
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--accent-color);
+  }
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal-policy-label {
+  text-decoration-skip-ink: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--description-color);
+
+  &::before {
+    display: inline-block;
+    margin-right: 8px;
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--title-color);
+    border-radius: 2px;
+    transform: translateY(+20%);
+
+    .modal-policy:checked + & {
+      background-color: var(--accent-color);
+      background-image: url(../images/icon-selected.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      border: none;
+    }
+  }
+}
+
+.modal-policy-agreement {
+  color: var(--accent-color);
+}
+
+.btn-form-submit {
+  align-self: flex-start;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
+}
