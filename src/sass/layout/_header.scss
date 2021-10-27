@@ -1,34 +1,137 @@
 .header {
   background-color: #f2f2f2;
+  padding-top: 25px;
+  padding-bottom: 15px;
 }
 
-.logo-phrase-wrapper {
-  font-family: var(--secondary-font);
+.logo {
+  // outline: 1px solid red;
+}
+
+.logo-text-wrapper {
+  font-family: var(--logo-font);
+  font-size: 58px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .logo-words-wrapper {
-  // outline: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+
+  word-spacing: -8px;
+  letter-spacing: 2px;
 }
 
 .logo-word1 {
+  display: block;
+  line-height: 0.8;
   color: #ffc602;
-  font-size: 56px;
   font-weight: 700;
-  line-height: 1;
-  // outline: 1px solid green;
 }
 
 .logo-word2 {
+  display: block;
+  line-height: 0.8;
   color: #000;
-  font-size: 56px;
   font-weight: 700;
-  line-height: 1;
 }
 
 .logo-quote {
-  font-size: 31px;
+  display: block;
+  line-height: 0.8;
+  font-size: 23px;
   color: #5a5a5a;
 }
+
+//  ------ adress ------
+.address {
+  margin-top: 25px;
+}
+
+.address-list {
+  display: flex;
+  justify-content: center;
+}
+
+.address-list-li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.adress-list-link {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.adress-list-svg {
+  // background-color: #fff;
+  width: 14px;
+  height: 14px;
+
+  // outline: 1px solid red;
+}
+
+.adress-list-svg:hover,
+.adress-list-link:hover {
+  fill: rgb(235, 133, 0);
+  color: rgb(235, 133, 0);
+}
+// ---------------------------
+
+// ------ NAV ------
+.nav {
+  margin-top: 10px;
+}
+.nav-menu {
+  // outline: 2px solid orange;
+  position: relative;
+}
+
+.nav-menu-link {
+  display: block;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #222222;
+  color: #fff;
+
+  font-weight: 700;
+}
+
+.nav-menu:hover .nav-list {
+  display: block;
+}
+
+.nav-list {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background-color: #d8d8d8;
+}
+
+.nav-list-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.nav-list-link {
+  display: block;
+  padding: 10px 20px;
+
+  text-decoration: none;
+  outline: 1px solid rgb(189, 183, 183);
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.nav-list-link:hover {
+  background-color: rgb(143, 148, 148);
+  color: white;
+}
+// -----------------
