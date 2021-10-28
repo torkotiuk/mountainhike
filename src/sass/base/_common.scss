@@ -6,9 +6,23 @@
   // outline: 2px solid red;
 }
 
+html,
 body {
   font-family: var(--main-font);
   font-style: normal;
+
+  //for pressing footer to the bottom of the page
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
 }
 
 img {
