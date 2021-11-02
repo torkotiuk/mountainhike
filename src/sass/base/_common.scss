@@ -6,6 +6,10 @@
   // outline: 2px solid red;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   font-family: var(--main-font);
@@ -35,4 +39,8 @@ img {
 
 .link {
   text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
 }

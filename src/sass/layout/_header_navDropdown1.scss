@@ -84,65 +84,62 @@
 
 .adress-list-svg:hover,
 .adress-list-link:hover {
-  // fill: rgb(235, 133, 0);
-  // color: rgb(235, 133, 0);
+  fill: rgb(235, 133, 0);
+  color: rgb(235, 133, 0);
 }
 // ---------------------------
 
 // ------ NAV ------
 .nav {
-  // outline: 2px solid green;
-  position: relative;
   margin-top: 10px;
 }
+.nav-menu {
+  // outline: 2px solid orange;
+  position: relative;
+}
 
-.hamburger {
+.nav-menu-link {
+  display: block;
   padding: 15px 25px;
   text-align: center;
   text-decoration: none;
-  background-color: #222222;
+  // background-color: #222222;
   color: #fff;
 
   font-weight: 700;
-  display: block;
-  z-index: 1;
-
-  cursor: pointer;
 }
 
-.menu {
-  z-index: 2;
-  position: absolute;
-  width: 100%;
-  bottom: -300%;
-  // outline: 1px solid red;
-  transition: linear 0.5s;
-
-  pointer-events: none;
-  opacity: 0;
-}
-
-.showMenu {
-  bottom: -410%;
-  background-color: #222222;
-
-  pointer-events: auto;
+.nav-menu:hover .nav-list {
+  // display: block;
   opacity: 1;
-
-  // box-shadow: 1px 0 3px #ffc602;
 }
 
-.menu-item {
+.nav-list {
+  position: absolute;
+  // display: none;
+  opacity: 0;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background-color: #d8d8d8;
+}
+
+.nav-list-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.nav-list-link {
   display: block;
   padding: 10px 20px;
 
+  text-decoration: none;
+  outline: 1px solid rgb(189, 183, 183);
   color: rgb(0, 0, 0);
-  background-color: #d1d1d1;
   font-weight: 700;
-
-  border-bottom: 1px solid rgb(128, 116, 116);
 }
 
-// .menu-item:hover {
-//   background-color: #fff;
-// }
+.nav-list-link:hover {
+  background-color: rgb(143, 148, 148);
+  color: white;
+}
+// -----------------
