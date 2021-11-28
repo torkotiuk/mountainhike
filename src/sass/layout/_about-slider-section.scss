@@ -1,11 +1,11 @@
-.about__slider-section {
-  outline: 1px solid orange;
-  background-color: rgb(230, 255, 235);
-}
-.about__slider-section .container {
-  outline: 1px solid green;
-  padding: 0 100px;
-}
+// .about__slider-section {
+//   outline: 1px solid orange;
+//   background-color: rgb(230, 255, 235);
+// }
+// .about__slider-section .container {
+//   outline: 1px solid green;
+//   padding: 0 100px;
+// }
 
 // ---------------------------------
 
@@ -18,7 +18,7 @@
 .carousel__track-container {
   position: relative;
   // outline: 3px solid orange;
-  // height: 700px;
+  height: 700px;
   height: 100%;
   overflow: hidden;
 }
@@ -26,8 +26,8 @@
 .carousel__track {
   position: relative;
   height: 100%;
-  // display: flex;
-  transition: transform 250ms ease-in;
+
+  // transition: transform 3000ms;
 }
 
 .carousel__image {
@@ -54,27 +54,27 @@
   display: none;
 }
 
-// .carousel__button--left {
-//   outline: 3px solid red;
+.carousel__button--left {
+  outline: 3px solid red;
 
-//   left: -60px;
-// }
+  left: -60px;
+}
 
-// .carousel__button--right {
-//   outline: 3px solid green;
+.carousel__button--right {
+  outline: 3px solid green;
 
-//   right: -60px;
-// }
+  right: -60px;
+}
 
-// .carousel__button img {
-//   padding: 5px;
-//   width: 50px;
-//   height: 50px;
-// }
+.carousel__button img {
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+}
 
 // carousel nav
 .carousel__nav {
-  // background: pink;
+  background: pink;
   display: flex;
   justify-content: center;
   padding: 10px 0;

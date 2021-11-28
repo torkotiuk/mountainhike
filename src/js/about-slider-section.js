@@ -14,11 +14,12 @@ const setSlidePosition = (slide, index) => {
 };
 slides.forEach(setSlidePosition);
 
-// move to the next slide
 const moveToSlide = (track, currentSlide, targetSlide) => {
   track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
   currentSlide.classList.remove('current-slide');
+  $(currentSlide).fadeOut(500);
   targetSlide.classList.add('current-slide');
+  $(targetSlide).fadeIn(1500);
 };
 
 const updateDots = (currentDot, targetDot) => {
@@ -39,7 +40,7 @@ const hideOrShowArrows = (slides, prevButton, nextButton, targetIndex) => {
   }
 };
 
-nextButton.addEventListener('click', e => {
+nextButton.addEventListener('click', () => {
   const currentSlide = track.querySelector('.current-slide');
   const nextSlide = currentSlide.nextElementSibling;
   moveToSlide(track, currentSlide, nextSlide);
@@ -69,7 +70,6 @@ prevButton.addEventListener('click', e => {
 });
 
 // carousel__nav
-
 dotsNav.addEventListener('click', e => {
   const targetDot = e.target.closest('button');
 
@@ -86,9 +86,31 @@ dotsNav.addEventListener('click', e => {
 
   hideOrShowArrows(slides, prevButton, nextButton, targetIndex);
 });
+// ------------------
 
-// setInterval(() => {
-//   console.log('test1');
-//   n();
-//   console.log('test2');
-// }, 1000);
+// ==========================
+// ==========================
+// ==========================
+// ==========================
+setInterval(() => {
+  // --- --- --- --- ---
+  const currentDot = dotsNav.querySelector('.current-slide');
+  const nextDot = currentDot.nextElementSibling;
+
+  if (nextDot === null) {
+    currentDot.classList.remove('current-slide');
+    dotsNav.firstElementChild.classList.add('current-slide');
+  } else {
+    currentDot.classList.remove('current-slide');
+    nextDot.classList.add('current-slide');
+  }
+  // --- --- --- --- ---
+
+  const currentSlide = track.querySelector('.current-slide');
+  const nextSlide = currentSlide.nextElementSibling;
+  if (currentSlide.nextElementSibling === null) {
+    moveToSlide(track, currentSlide, track.firstElementChild);
+    return;
+  }
+  moveToSlide(track, currentSlide, nextSlide);
+}, 4000);
